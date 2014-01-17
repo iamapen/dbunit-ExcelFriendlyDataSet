@@ -2,7 +2,7 @@
   "name": "iamapen/excel-friendly-data-set",
   "type": "library",
   "description": "Excel friendly CsvDataSet for DBUnit",
-  "homepage": "https://github.com/iamapen/ExcelFriendlyDataSet",
+  "homepage": "https://github.com/iamapen/dbunit-ExcelFriendlyDataSet",
   "keywords": ["phpunit", "dbunit"],
   "license": "MIT",
   
