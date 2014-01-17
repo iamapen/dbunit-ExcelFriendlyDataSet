@@ -22,6 +22,7 @@
   
   "require": {
     "php": ">=5.3.1",
+    "ext-pdo": "*",
     "pear-openpear.org/Stream_Filter_Mbstring": "= 0.0.7"
   },
   "require-dev": {
@@ -30,7 +31,7 @@
   
   "autoload": {
     "psr-0": {
-      "Iamapen\\ExcelFriendly\\ExcelCsvDataSet": "src/"
+      "Iamapen\\ExcelFriendlyDataSet\\ExcelCsvDataSet": "src/"
     }
   }
 }
