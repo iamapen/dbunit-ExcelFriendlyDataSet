@@ -31,7 +31,8 @@
   
   "autoload": {
     "psr-0": {
-      "Iamapen\\ExcelFriendlyDataSet\\ExcelCsvDataSet": "src/"
+      "Iamapen\\ExcelFriendlyDataSet\\ExcelCsvDataSet": "src/",
+      "Iamapen\\ExcelFriendlyDataSet\\CommentableCsvDataSet": "src/"
     }
   },
   
