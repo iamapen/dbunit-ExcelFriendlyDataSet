@@ -5,14 +5,16 @@ namespace Iamapen\ExcelFriendlyDataSet;
 stream_filter_register("convert.mbstring.*", "Stream_Filter_Mbstring");
 
 /**
- * Excel friendly な CSV DataSet(DbUnit)
- * 
- * Excelで扱いやすいUTF-16(LE+BOM)のCSVをUTF-8に変換しながら取り込む。
+ * Excel-friendly CSV DataSet. (multibyte locale)
+ *
+ * UTF-16(LE+BOM) converting to UTF-8.
+ *
  * @author Yosuke Kushida <iamapen@studiopoppy.com>
- * @copyright 2010
+ * @copyright 2010-2014
  */
-class ExcelCsvDataSet extends \PHPUnit_Extensions_Database_DataSet_CsvDataSet {
+class ExcelCsvDataSet extends CommentableCsvDataSet {
     /**
+     * excel default is "\t"
      * @var string
      */
     protected $delimiter = "\t";
