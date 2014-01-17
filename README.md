@@ -26,7 +26,7 @@ composer.json
         "type": "pear",
         "url": "http://openpear.org"
       }
-    ]
+    ],
 
     require-dev: {
       "iamapen/excel-friendly-data-set": ">=0.0.2"
