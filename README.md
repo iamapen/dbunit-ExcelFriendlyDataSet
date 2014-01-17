@@ -1,4 +1,4 @@
-dbunit-ExcelFriendlyDataSet
-===========================
+ExcelCsvDataSet
+===============
 
-Excel friendly CsvDataSet for DBunit
+Excelで扱いやすい UTF-16(LE+BOM) のCSVを PHPUnit/dbunit で扱うための CsvDataSet。

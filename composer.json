@@ -1,0 +1,36 @@
+{
+  "name": "iamapen/excel-friendly-data-set",
+  "type": "library",
+  "description": "Excel friendly CsvDataSet for DBUnit",
+  "homepage": "https://github.com/iamapen/ExcelFriendlyDataSet",
+  "keywords": ["phpunit", "dbunit"],
+  "license": "MIT",
+  
+  "minimum-stability" : "stable",
+  "authors": [
+    {
+      "name": "Yosuke Kushida",
+      "email": "iamapen@studiopoppy.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "pear",
+      "url": "openpear.org"
+    }
+  ],
+  
+  "require": {
+    "php": ">=5.3.1",
+    "pear-openpear.org/Stream_Filter_Mbstring": "= 0.0.7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  
+  "autoload": {
+    "psr-0": {
+      "Iamapen\\ExcelFriendly\\ExcelCsvDataSet": "src/"
+    }
+  }
+}
