@@ -2,8 +2,6 @@
 
 namespace Iamapen\ExcelFriendlyDataSet;
 
-stream_filter_register("convert.mbstring.*", "Stream_Filter_Mbstring");
-
 /**
  * Excel-friendly CSV DataSet. (multibyte locale)
  *
@@ -52,10 +50,15 @@ class ExcelCsvDataSet extends CommentableCsvDataSet {
             throw new \InvalidArgumentException("Could not read csv file: {$csvFile}");
         }
 
-        $fh      = fopen('php://filter/convert.mbstring.encoding.UTF-16LE:UTF-8/resource='.$csvFile, 'r');
+        $fh      = fopen($csvFile, 'rb');
         fseek($fh, 2);  // after BOM
 
-        $columns = $this->getCsvRow($fh);
+        // TODO chunk
+        $tmpFp = fopen('php://temp', 'w+b');
+        fwrite($tmpFp, mb_convert_encoding(stream_get_contents($fh), 'UTF-8', 'UTF-16LE'));
+        rewind($tmpFp);
+
+        $columns = $this->getCsvRow($tmpFp);
 
         if ($columns === FALSE)
         {
@@ -65,7 +68,7 @@ class ExcelCsvDataSet extends CommentableCsvDataSet {
         $metaData = new \PHPUnit_Extensions_Database_DataSet_DefaultTableMetaData($tableName, $columns);
         $table    = new \PHPUnit_Extensions_Database_DataSet_DefaultTable($metaData);
 
-        while (($row = $this->getCsvRow($fh)) !== FALSE)
+        while (($row = $this->getCsvRow($tmpFp)) !== FALSE)
         {
             $table->addRow(array_combine($columns, $row));
         }
