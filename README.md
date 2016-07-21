@@ -17,19 +17,11 @@ UTF-16(LE+BOM) にすれば「D&Dで開く」「Ctrl+S」で保存など比較�
 Install
 =======
 
-依存ライブラリが OpenPear に存在するため、repositoriesの定義があわせて必要。
 
 composer.json
 
-    repositories: [
-      {
-        "type": "pear",
-        "url": "http://openpear.org"
-      }
-    ],
-
     require-dev: {
-      "iamapen/excel-friendly-data-set": ">=0.0.2"
+      "iamapen/excel-friendly-data-set": ">=1.0.0"
     }
 
 Usage
