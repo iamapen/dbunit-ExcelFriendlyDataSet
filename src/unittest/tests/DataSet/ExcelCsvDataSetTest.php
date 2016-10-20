@@ -1,7 +1,7 @@
 <?php
 namespace Iamapen\ExcelCsvDataSet\Unittest;
 
-use Iamapen\ExcelFriendlyDataSet\ExcelCsvDataSet;
+use Iamapen\ExcelFriendlyDataSet\Database\DataSet\ExcelCsvDataSet;
 
 class ExcelCsvDataSetTest extends \PHPUnit_Framework_TestCase
 {
@@ -67,15 +67,15 @@ asdflkjsadf asdfsadfhl "adsf, halsdf" sadfhlasdf'
         $expectedDataSet = new \PHPUnit_Extensions_Database_DataSet_DefaultDataSet(array($table1, $table2));
 
         $csvDataSet = new \PHPUnit_Extensions_Database_DataSet_CsvDataSet();
-        $csvDataSet->addTable('table1', dirname(__FILE__).'/../_files/CsvDataSets/table1.csv');
-        $csvDataSet->addTable('table2', dirname(__FILE__).'/../_files/CsvDataSets/table2.csv');
+        $csvDataSet->addTable('table1', dirname(__FILE__).'/../../fixtures/CsvDataSets/table1.csv');
+        $csvDataSet->addTable('table2', dirname(__FILE__).'/../../fixtures/CsvDataSets/table2.csv');
 
         \PHPUnit_Extensions_Database_TestCase::assertDataSetsEqual($expectedDataSet, $csvDataSet);
     }
 
     function testHoge() {
         $dataSet = new ExcelCsvDataSet();
-        $dataSet->addTable('table1', dirname(__FILE__).'/../fixtures/excelCsv.csv');
+        $dataSet->addTable('table1', dirname(__FILE__).'/../../fixtures/excelCsv.csv');
 
         $table1MetaData = new \PHPUnit_Extensions_Database_DataSet_DefaultTableMetaData(
             'table1', array('列1', '列2', '列3')

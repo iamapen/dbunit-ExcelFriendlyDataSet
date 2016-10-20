@@ -1,6 +1,6 @@
 <?php
 
-namespace Iamapen\ExcelFriendlyDataSet;
+namespace Iamapen\ExcelFriendlyDataSet\Database\DataSet;
 
 /**
  * Excel-friendly CSV DataSet. (multibyte locale)
@@ -10,7 +10,8 @@ namespace Iamapen\ExcelFriendlyDataSet;
  * @author Yosuke Kushida <iamapen@studiopoppy.com>
  * @copyright 2010-2014
  */
-class ExcelCsvDataSet extends CommentableCsvDataSet {
+class ExcelCsvDataSet extends CommentableCsvDataSet
+{
     /**
      * excel default is "\t"
      * @var string

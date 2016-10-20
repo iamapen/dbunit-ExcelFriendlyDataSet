@@ -15,19 +15,20 @@
   ],
 
   "require": {
-    "php": ">=5.3.1",
+    "php": ">=5.3.3",
     "ext-pdo": "*",
     "ext-mbstring": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.8",
-    "phpunit/dbunit": "~1.2"
+    "phpunit/dbunit": "~1.2",
+
+    "phpdocumentor/reflection-docblock": "~2.0.4"
   },
 
   "autoload": {
-    "psr-0": {
-      "Iamapen\\ExcelFriendlyDataSet\\ExcelCsvDataSet": "src/lib/",
-      "Iamapen\\ExcelFriendlyDataSet\\CommentableCsvDataSet": "src/lib/"
+    "psr-4": {
+      "Iamapen\\ExcelFriendlyDataSet\\": "src/lib/Iamapen/ExcelFriendlyDataSet/"
     }
   },
 

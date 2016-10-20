@@ -1,6 +1,6 @@
 <?php
 
-namespace Iamapen\ExcelFriendlyDataSet;
+namespace Iamapen\ExcelFriendlyDataSet\Database\DataSet;
 
 /**
  * Ignore N columns from left.
@@ -10,7 +10,8 @@ namespace Iamapen\ExcelFriendlyDataSet;
  * @author Yosuke Kushida <iamapen@studiopoppy.com>
  * @copyright 2010-2014
  */
-class CommentableCsvDataSet extends \PHPUnit_Extensions_Database_DataSet_CsvDataSet {
+class CommentableCsvDataSet extends \PHPUnit_Extensions_Database_DataSet_CsvDataSet
+{
 
     /**
      * Ignore CSV columns
@@ -22,7 +23,8 @@ class CommentableCsvDataSet extends \PHPUnit_Extensions_Database_DataSet_CsvData
      * Ignore CSV columns from left
      * @param int $count number of columns
      */
-    public function setIgnoreColumnCount($count) {
+    public function setIgnoreColumnCount($count)
+    {
         $this->ignoreColumnCount = $count;
     }
 
@@ -44,7 +46,7 @@ class CommentableCsvDataSet extends \PHPUnit_Extensions_Database_DataSet_CsvData
             return false;
         }
 
-        for($i = 0; $i < $this->ignoreColumnCount; $i++) {
+        for ($i = 0; $i < $this->ignoreColumnCount; $i++) {
             array_shift($rows);
         }
         return $rows;

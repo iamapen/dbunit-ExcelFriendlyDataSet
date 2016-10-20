@@ -1,6 +1,3 @@
-.buildpath
-.project
-.settings/
+/_build/*
+/vendor/*
 
-composer.phar
-vendor/
