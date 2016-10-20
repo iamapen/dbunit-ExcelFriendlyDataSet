@@ -1,0 +1,44 @@
+<phpunit backupGlobals="false"
+     backupStaticAttributes="false"
+     bootstrap="../../vendor/autoload.php"
+     cacheTokens="true"
+     colors="true"
+     convertErrorsToExceptions="true"
+     convertNoticesToExceptions="true"
+     convertWarningsToExceptions="true"
+     forceCoversAnnotation="false"
+     mapTestClassNameToCoveredClassName="false"
+     processIsolation="false"
+     stopOnError="false"
+     stopOnFailure="false"
+     stopOnIncomplete="false"
+     stopOnSkipped="false"
+     stderr="true"
+     verbose="true">
+
+  <php>
+    <var name="VARNAME" value="value"/>
+  </php>
+
+  <filter>
+    <blacklist>
+    </blacklist>
+    <whitelist>
+      <directory suffix=".php">../lib</directory>
+      <exclude>
+        <directory>../src/dummyDir</directory>
+        <file>../src/dummyFile</file>
+      </exclude>
+    </whitelist>
+  </filter>
+
+  <logging>
+    <log type="coverage-html" target="../../_build/coverage"
+        title="Excel-friendly-dataset" charset="UTF-8"
+        yui="true" highlight="true"
+        lowUpperBound="35" highLowerBound="70"/>
+    <log type="coverage-clover" target="../../_build/tmp/clover.xml"/>
+    <log type="junit" target="../../_build/tmp/junit.xml"/>
+    <log type="coverage-php" target="../../_build/tmp/cov/phpunit.cov"/>
+  </logging>
+</phpunit>
