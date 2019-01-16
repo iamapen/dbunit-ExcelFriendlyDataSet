@@ -6,6 +6,9 @@ phpunit3～4/dbunit 用の DataSet や Operation の詰め合わせ。
 元々はExcelで扱いやすい UTF-16(LE+BOM) のCSVを phpunit/dbunit で使うための CsvDataSet がメインだったためこの名前になっているが、
 今後はただの拡張の詰め合わせになる予定。
 
+※phpunit5～7 へ対応したものは別プロジェクトになりました。  
+今後はこちら [iamapen/commentable-csv-data-set](https://packagist.org/packages/iamapen/commentable-csv-data-set)
+
 
 Install
 =======
