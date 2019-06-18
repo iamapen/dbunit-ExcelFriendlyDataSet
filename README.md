@@ -7,7 +7,7 @@ phpunit3～4/dbunit 用の DataSet や Operation の詰め合わせ。
 今後はただの拡張の詰め合わせになる予定。
 
 ※phpunit5～7 へ対応したものは別プロジェクトになりました。  
-今後はこちら [iamapen/commentable-csv-data-set](https://packagist.org/packages/iamapen/commentable-csv-data-set)
+今後はこちら [iamapen/commentable-data-set](https://packagist.org/packages/iamapen/commentable-data-set)
 
 
 Install
